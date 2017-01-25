@@ -6,7 +6,7 @@ class Toaster extends React.Component {
 
   render() {
     console.log('inside Toaster render.....');
-    return <div className="eto-toast-container"></div>;
+    return <div className="eto-toast-container"><span></span></div>;
   }
 
   /**
