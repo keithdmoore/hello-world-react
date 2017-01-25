@@ -45,7 +45,7 @@ class ChangeStatusModal extends React.Component {
                     className="row" 
                     containerClassName="col-xs-12 col-sm-8" 
                     labelClassName="col-xs-12 col-sm-4"
-                    label="Status"
+                    label="Status Action"
                     value="Select an option..."
                     id="select_status"
                     name="select_status"
@@ -71,7 +71,7 @@ class ChangeStatusModal extends React.Component {
                   </div>
                   <div className="eto-select row margin-top-xs-1">
                     <label className="eto-select__label col-xs-12 col-sm-4"><strong>Product Name</strong></label>
-                    <div className="eto-select__label col-xs-12 col-sm-8">43564367</div>
+                    <div className="eto-select__label col-xs-12 col-sm-8">67655854</div>
                   </div>
                   <div className="eto-select row margin-top-xs-1">
                     <label className="eto-select__label col-xs-12 col-sm-4"><strong>Version</strong></label>
@@ -79,11 +79,11 @@ class ChangeStatusModal extends React.Component {
                   </div>
                   <div className="eto-select row margin-top-xs-1">
                     <label className="eto-select__label col-xs-12 col-sm-4"><strong>Description</strong></label>
-                    <div className="eto-select__label col-xs-12 col-sm-8">MC24-AG44-HAGF-434</div>
+                    <div className="eto-select__label col-xs-12 col-sm-8">M1591_A14_C_NA_000126</div>
                   </div>
                   <div className="eto-select row margin-top-xs-1">
                     <label className="eto-select__label col-xs-12 col-sm-4"><strong>Current Status</strong></label>
-                    <div className="eto-select__label col-xs-12 col-sm-8">DEVELOPMENT</div>
+                    <div className="eto-select__label col-xs-12 col-sm-8">Engineering</div>
                   </div>                                                                      
                 </section>
               </form>
