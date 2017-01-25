@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { Modal } from 'e2open-design-system';
 import Toaster from './Toaster.js';
 import ComboBoxComponent from './ComboBox.js';
-import SelectInputComponent from './SelectInputComponent.js';
+import Select from './Select.js';
 
 class ChangeStatusModal extends React.Component {
+  // URL to invoke a GET pcChangeStatus.do?from=ajaxCall&tableName=Product&recordId=116049
   constructor(props) {
     super(props);
     this.handleClose = this.handleClose.bind(this);
@@ -20,9 +21,9 @@ class ChangeStatusModal extends React.Component {
     console.log('inside ChangeStatusModal render.....');
     const statusOptions = [
       { label: 'Select an option...', value: '', selected: true },
-      { label: 'All', value: 'All' },
-      { label: 'label1', value: 'value1'},
-      { label: 'label2', value: 'value2'}
+      { label: 'All'},
+      { label: 'label1'},
+      { label: 'label2'}
     ];
 
     const reasonCodeOptions = [
@@ -32,16 +33,15 @@ class ChangeStatusModal extends React.Component {
       { label: 'label4', value: 'value4'}
     ];
 	  return <div className="eto-modal" id="change-status-modal">
-	    <div className="eto-modal__content col-xs-10 col-sm-8 col-md-6 col-lg-4 col-xl-2">
+	    <div className="eto-modal__content col-xs-8 col-sm-4 col-md-4 col-lg-2 col-xl-2">
           <header className="eto-modal__header">
             <h3>Change Status for Part</h3>
             <button className="eto-modal__close" onClick={this.handleClose}></button>
           </header>
           <Toaster onCreate={this.onCreateToaster}/>
-	        <section className="eto-modal__body">
-            <section className="eto-well">
-              <form className="eto-form eto-form--responsive container">
-                <SelectInputComponent 
+             <form className="eto-form eto-form--responsive">
+             <section className="eto-well eto-well-dull">
+                <Select
                     className="row" 
                     containerClassName="col-xs-12 col-sm-8" 
                     labelClassName="col-xs-12 col-sm-4"
@@ -51,9 +51,9 @@ class ChangeStatusModal extends React.Component {
                     name="select_status"
                     horizontal="true"
                     options={statusOptions}
-                    />
-                <SelectInputComponent 
-                    className="row" 
+                    />    
+                <Select
+                    className="row margin-top-xs-2" 
                     containerClassName="col-xs-12 col-sm-8" 
                     labelClassName="col-xs-12 col-sm-4"
                     label="Reason Code"
@@ -62,12 +62,32 @@ class ChangeStatusModal extends React.Component {
                     name="select_reason_code"
                     horizontal="true"
                     options={reasonCodeOptions}
-                    />                    
+                    />  
+                </section>  
+                <section className="eto-well eto-well-light">                
+                  <div className="eto-select row">
+                    <label className="eto-select__label col-xs-12 col-sm-4"><strong>Model</strong></label>
+                    <div className="eto-select__label col-xs-12 col-sm-8">PRODUCTION</div>
+                  </div>
+                  <div className="eto-select row margin-top-xs-1">
+                    <label className="eto-select__label col-xs-12 col-sm-4"><strong>Product Name</strong></label>
+                    <div className="eto-select__label col-xs-12 col-sm-8">43564367</div>
+                  </div>
+                  <div className="eto-select row margin-top-xs-1">
+                    <label className="eto-select__label col-xs-12 col-sm-4"><strong>Version</strong></label>
+                    <div className="eto-select__label col-xs-12 col-sm-8">&mdash;</div>
+                  </div>
+                  <div className="eto-select row margin-top-xs-1">
+                    <label className="eto-select__label col-xs-12 col-sm-4"><strong>Description</strong></label>
+                    <div className="eto-select__label col-xs-12 col-sm-8">MC24-AG44-HAGF-434</div>
+                  </div>
+                  <div className="eto-select row margin-top-xs-1">
+                    <label className="eto-select__label col-xs-12 col-sm-4"><strong>Current Status</strong></label>
+                    <div className="eto-select__label col-xs-12 col-sm-8">DEVELOPMENT</div>
+                  </div>                                                                      
+                </section>
               </form>
-              <label>Model</label>
-              <span className="col-xs-12 col-sm-8">Production</span>
-            </section> 
-		 	    </section>
+
 	          <footer className="eto-modal__footer">
 	          	<button type="button" id="cancel-status-button" name="cancel-status-button" className="eto-btn margin-left-xs-1" 
 	          		    onClick={this.handleClose}>Cancel</button>

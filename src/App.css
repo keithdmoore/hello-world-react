@@ -2,9 +2,13 @@
  /* text-align: center; */
 }
 
-/*.eto-select select  {
-  width: 50%;
-}*/
+.eto-well-light {
+  background-color: #ffffff;
+}
+
+.eto-well-dull {
+  background-color: #f8fafb;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

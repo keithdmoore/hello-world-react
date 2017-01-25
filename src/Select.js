@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { SelectInput } from 'e2open-design-system';
 
-class SelectInputComponent extends React.Component {
+class Select extends React.Component {
   render() {
     return <div/>;
   }
@@ -35,4 +35,4 @@ class SelectInputComponent extends React.Component {
   }
 }
 
-export default SelectInputComponent;
+export default Select;
